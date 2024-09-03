@@ -46,6 +46,14 @@ Add the service provider to the providers array in your `config/app.php` file:
 <b>Creating Roles</b>
 You can create roles using the Role model provided by the package:
 
+Now you can insert the sideber menu name or topbar menu name into permissions table
+
+<b>Example</b> : student , subcategories , products , accounts etc
+
+Role name is input and permissions is checkbox array. you can handle from same form and post request
+
+![Digipixel-Role](https://github.com/user-attachments/assets/1cfe8d26-6c9d-4cd0-b71a-8c8d82b9f934)
+
 <b>#Controller</b>
 ```bash
 // Your Controller
