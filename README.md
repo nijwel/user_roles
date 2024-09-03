@@ -52,7 +52,6 @@ Now you can insert the sideber menu name or topbar menu name into permissions ta
 
 Role name is input and permissions is checkbox array. you can handle from same form and post request
 
-![Digipixel-Role](https://github.com/user-attachments/assets/1cfe8d26-6c9d-4cd0-b71a-8c8d82b9f934)
 
 <b>#Controller</b>
 ```bash
@@ -62,7 +61,7 @@ use Nijwel\UserRoles\Controllers\RoleController as NijwelRoleController;
 use Nijwel\UserRoles\Models\Role;
 ```
 
-<b>#Controller</b>
+<b>#Controller store method</b>
 ```bash
 //For store
 public function store(Request $request)
@@ -72,7 +71,7 @@ public function store(Request $request)
 }
 ```
 
-<b>#Controller</b>
+<b>#Controller update method</b>
 ```bash
 //For update
 public function update(Request $request, $id)
@@ -81,7 +80,7 @@ public function update(Request $request, $id)
 }
 ```
 
-<b>#Controller</b>
+<b>#Controller destroy method</b>
 ```bash
 public function destroy($id)
 {
