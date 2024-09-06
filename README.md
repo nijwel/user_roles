@@ -47,47 +47,104 @@ Add the service provider to the providers array in your `config/app.php` file:
 <b>Creating Roles</b>
 You can create roles using the Role model provided by the package:
 
-Now you can insert the sideber menu name or topbar menu name into permissions table
+Now you can insert the side-ber menu name or top-bar menu name into permissions table
 
 <b>Example</b> : student , subcategories , products , accounts etc
 
 Role name is input and permissions is checkbox array. you can handle from same form and post request
 
 
-<b>#Controller</b>
-```bash
+<b>#Your Controller</b>
+
+
 // Your Controller
-use Nijwel\UserRoles\Models\Permission;
-use Nijwel\UserRoles\Controllers\RoleController as NijwelRoleController;
-use Nijwel\UserRoles\Models\Role;
-```
 
-<b>#Controller store method</b>
-```bash
-//For store
-public function store(Request $request)
-{
-    // Pass the request data
-    $this->NijwelRoleController->store($request);
-}
-```
+    use Nijwel\UserRoles\Services\UserRoleService;
 
-<b>#Controller update method</b>
-```bash
-//For update
-public function update(Request $request, $id)
-{
-    $this->NijwelRoleController->update($request, $id);
-}
-```
+    protected $UserRoleService;
 
-<b>#Controller destroy method</b>
-```bash
-public function destroy($id)
-{
-    $this->NijwelRoleController->destroy($id);
-}
-```
+    public function __construct(UserRoleService $UserRoleService)
+    {
+        $this->UserRoleService = $UserRoleService;
+    }
+
+/*** Get all role
+
+    UserRoleService::getAllRole();
+
+/*** Get singe role
+
+    UserRoleService::getRole($id);
+
+/*** Store role
+
+    UserRoleService::createRole($request->all());
+
+
+/*** Update role
+
+    UserRoleService::updateRole($request->all(), $id);
+
+/*** delete role
+
+    UserRoleService::destroyRole($id);
+
+
+
+
+
+
+/***Get all permission list.
+
+<b>NB: </b>permission means your side bar name
+
+    UserRoleService::getAllPermission();
+
+/*** Get single permission
+
+    UserRoleService::getPermission($id);
+
+/*** Store permissions
+
+    UserRoleService::createPermission($request->all());
+
+
+/*** Update permissions
+
+    UserRoleService::updatePermission($request->all(), $id);
+
+/*** delete permissions
+
+    UserRoleService::destroyPermission($id);
+
+
+
+
+/*** Get All role with permission
+
+<b>NB: </b>You can handle with one form
+
+    UserRoleService::getAllRoleWithPermission();
+
+/*** Get single role with permission
+
+    UserRoleService::getRoleWithPermission($id);
+
+/*** Store role with permission [ This is the array data for role and permission ]
+    
+    //Permissions is array value ;
+    UserRoleService::createRoleWithPermission($request->all());
+
+/*** Update role with permission [Array]
+
+    //Permissions is array value ;
+    UserRoleService::updateRoleWithPermission($request->all(), $id);
+
+/*** delete role with permission
+
+    UserRoleService::destroyRoleWithPermission($id);
+
+
 
 ### For blade file
 ```bash

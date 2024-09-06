@@ -39,7 +39,7 @@ class UserRoleService
         return $role;
     }
 
-    public static function deleteRole($id)
+    public static function destroyRole($id)
     {
         $role = Role::find($id)->delete();
         return $role;
@@ -163,7 +163,7 @@ class UserRoleService
     }
 
 
-    public static function deleteRoleWithPermission($id)
+    public static function destroyRoleWithPermission($id)
     {
         $role = Role::find($id)->delete();
         return $role;
@@ -226,7 +226,7 @@ class UserRoleService
     }
 
 
-    public static function deleteUser($user)
+    public static function destroyUser($user)
     {
         $user->delete();
         return "User deleted successfully";
@@ -260,7 +260,7 @@ class UserRoleService
     }
 
 
-    public static function deleteUserWithRole($user)
+    public static function destroyUserWithRole($user)
     {
         $user->delete();
         return "User deleted successfully";
@@ -285,7 +285,7 @@ class UserRoleService
     }
 
 
-    public static function deleteUserWithRoleAndPermission($user)
+    public static function destroyUserWithRoleAndPermission($user)
     {
         $user->delete();
         return "User deleted successfully";
