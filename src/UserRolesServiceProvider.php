@@ -3,6 +3,7 @@
 namespace Nijwel\UserRoles;
 
 use Illuminate\Support\ServiceProvider;
+use Nijwel\UserRoles\Services\UserRoleService;
 
 class UserRolesServiceProvider extends ServiceProvider
 {
@@ -34,6 +35,11 @@ class UserRolesServiceProvider extends ServiceProvider
             __DIR__ . '/../config/userroles.php',
             'tag'
         );
+
+        // Register the service class
+        $this->app->singleton(UserRoleService::class, function ($app) {
+            return new UserRoleService();
+        });
 
         $this->loadHelpers();
     }
