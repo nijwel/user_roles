@@ -56,9 +56,6 @@ Role name is input and permissions is checkbox array. you can handle from same f
 
 <b>#Your Controller</b>
 
-
-// Your Controller
-
     use Nijwel\UserRoles\Services\UserRoleService;
 
     protected $UserRoleService;
@@ -68,24 +65,24 @@ Role name is input and permissions is checkbox array. you can handle from same f
         $this->UserRoleService = $UserRoleService;
     }
 
-/*** Get all role
+<b>#Get all role</b> 
 
     UserRoleService::getAllRole();
 
-/*** Get singe role
+<b>#Get singe role</b>
 
     UserRoleService::getRole($id);
 
-/*** Store role
+<b>#Store role</b>
 
     UserRoleService::createRole($request->all());
 
 
-/*** Update role
+<b>#Update role</b>
 
     UserRoleService::updateRole($request->all(), $id);
 
-/*** delete role
+<b>#delete role</b>
 
     UserRoleService::destroyRole($id);
 
@@ -94,53 +91,53 @@ Role name is input and permissions is checkbox array. you can handle from same f
 
 
 
-/***Get all permission list.
+<b>Get all permission list.</b>
 
 <b>NB: </b>permission means your side bar name
 
     UserRoleService::getAllPermission();
 
-/*** Get single permission
+<b>#Get single permission</b>
 
     UserRoleService::getPermission($id);
 
-/*** Store permissions
+<b>#Store permissions</b>
 
     UserRoleService::createPermission($request->all());
 
 
-/*** Update permissions
+<b>#Update permissions</b>
 
     UserRoleService::updatePermission($request->all(), $id);
 
-/*** delete permissions
+<b>#delete permissions</b>
 
     UserRoleService::destroyPermission($id);
 
 
 
 
-/*** Get All role with permission
+<b>#Get All role with permission</b>
 
-<b>NB: </b>You can handle with one form
+<b>NB: </b> You can handle with one form
 
     UserRoleService::getAllRoleWithPermission();
 
-/*** Get single role with permission
+<b>#Get single role with permission</b>
 
     UserRoleService::getRoleWithPermission($id);
 
-/*** Store role with permission [ This is the array data for role and permission ]
+<b>#Store role with permission [ This is the array data for role and permission ]</b>
     
     //Permissions is array value ;
     UserRoleService::createRoleWithPermission($request->all());
 
-/*** Update role with permission [Array]
+<b>#Update role with permission [Array]</b>
 
     //Permissions is array value ;
     UserRoleService::updateRoleWithPermission($request->all(), $id);
 
-/*** delete role with permission
+<b>#delete role with permission</b>
 
     UserRoleService::destroyRoleWithPermission($id);
 
